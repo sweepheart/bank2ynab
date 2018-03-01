@@ -146,6 +146,10 @@ setup(
 #        'test': ['coverage'],
 #    },
 
+# based on https://packaging.python.org/tutorials/
+# distributing-packages/#python-requires :
+    python_requires='>=2.7, <4',
+
     # If there are data files included in your packages that need to be
     # installed, specify them here.
     #
