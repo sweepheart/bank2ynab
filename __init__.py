@@ -12,6 +12,9 @@ LONG_DESCRIPTION = "A common project to consolidate all conversion efforts " \
 URL = "https://github.com/torbengb/bank2ynab"
 EMAIL = "torben@g-b.dk"
 AUTHOR = "https://github.com/torbengb/bank2ynab/graphs/contributors"
+KEYWORDS = "ynab bank bank-statement conversion-efforts credit-card" \
+        "transactions converter ynab-converter ynab-format money csv" \
+        "bank-format conversion conversion-utility"
 
 # define the version numbers:
 # !! See also: https://github.com/torbengb/bank2ynab/wiki/VersionNumbers !!
