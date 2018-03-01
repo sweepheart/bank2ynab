@@ -3,13 +3,39 @@
 -->
 # bank2ynab
 
+
 A common project to consolidate all conversion efforts from various banks' export formats into YNAB's import format.
 
-[![Travis status](https://api.travis-ci.org/torbengb/bank2ynab.svg?branch=develop)](https://travis-ci.org/torbengb/bank2ynab) 
+Development: [![Travis status](https://api.travis-ci.org/torbengb/bank2ynab.svg?branch=develop)](https://travis-ci.org/torbengb/bank2ynab) 
 [![Join the chat at https://gitter.im/bank2ynab/Lobby](https://badges.gitter.im/github-release-notes/Lobby.svg)](https://gitter.im/bank2ynab/Lobby)
 [![codecov](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/graph/badge.svg)](https://codecov.io/gh/torbengb/bank2ynab)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/8b6259502a92c06b0cd5/test_coverage)](https://codeclimate.com/github/torbengb/bank2ynab/test_coverage)
-[![Maintainability](https://api.codeclimate.com/v1/badges/8b6259502a92c06b0cd5/maintainability)](https://codeclimate.com/github/torbengb/bank2ynab/maintainability)
+[![GitHub issues](https://img.shields.io/github/issues-raw/torbengb/bank2ynab.svg)](https://github.com/torbengb/bank2ynab/issues)
+
+[Code Climate](https://codeclimate.com/github/torbengb/bank2ynab/): 
+![Code Climate](https://img.shields.io/codeclimate/maintainability/torbengb/bank2ynab.svg)
+![Code Climate](https://img.shields.io/codeclimate/coverage/github/torbengb/bank2ynab.svg)
+![Code Climate](https://img.shields.io/codeclimate/issues/github/torbengb/bank2ynab.svg)
+
+[PyPI](https://pypi.org/search/?q=bank2ynab&o=&c=Programming+Language+%3A%3A+Python): 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bank2ynab.svg)
+![PyPI - Status](https://img.shields.io/pypi/status/bank2ynab.svg)
+
+<!-- Here's a *ridiculous amount of badges: http://shields.io/#your-badge -->
+
+<!--
+![Custom Badge Name](https://img.shields.io/badge/style-flat-green.svg?longCache=true&style=flat&label=custom-badge-![license](https://img.shields.io/github/license/torbengb/bank2ynab.svg)
+![GitHub issues by-label](https://img.shields.io/github/issues-raw/torbengb/bank2ynab/good-first-issue-badge.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bank2ynab.svg)
+![PyPI - Status](https://img.shields.io/pypi/status/bank2ynab.svg)
+![Code Climate](https://img.shields.io/codeclimate/maintainability/torbengb/bank2ynab.svg)
+![Code Climate](https://img.shields.io/codeclimate/issues/github/torbengb/bank2ynab.svg)
+![Code Climate](https://img.shields.io/codeclimate/coverage/github/torbengb/bank2ynab.svg)
+![PyPI](https://img.shields.io/pypi/torbengb/bank2ynab.svg)
+[![Github All Releases](https://img.shields.io/github/downloads/torbengb/bank2ynab/total.svg)](https://github.com/torbengb/bank2ynab/releases)
+title&colorA=555555&colorB=97CA00&maxAge=3600)
+![StackExchange](https://img.shields.io/stackexchange/stackoverflow/t/bank2ynab.svg)
+![StackExchange](https://img.shields.io/stackexchange/superuser/t/bank2ynab.svg)
+-->
 
 - [What? (Features)](#what)
   - [Wish List](#wishlist)
