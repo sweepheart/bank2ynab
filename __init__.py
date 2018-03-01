@@ -20,7 +20,7 @@ version_minor = 0  # must be integer
 version_patch = "0"  # must be string
 version_suffix = "feature-176-pypi-installer"
 # I'd like the suffix to *automagically* include the GitHub branch name,
-# but that will have to be a separate enhancement.
+# but that will have to be a separate enhancement, see Issue #180.
 
 # only add the suffix to the patch level if it's not a master release:
 if version_suffix != "master":
