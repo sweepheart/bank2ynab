@@ -8,8 +8,9 @@ A common project to consolidate all conversion efforts from various banks' expor
 
 Development: [![Travis status](https://api.travis-ci.org/torbengb/bank2ynab.svg?branch=develop)](https://travis-ci.org/torbengb/bank2ynab) 
 [![Join the chat at https://gitter.im/bank2ynab/Lobby](https://badges.gitter.im/github-release-notes/Lobby.svg)](https://gitter.im/bank2ynab/Lobby)
-[![codecov.io](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/graph/badge.svg)](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/commits)
 [![GitHub open issues](https://img.shields.io/github/issues-raw/torbengb/bank2ynab.svg)](https://github.com/torbengb/bank2ynab/issues)
+![GitHub last commit](https://img.shields.io/github/last-commit/torbengb/bank2ynab.svg)
+[![codecov.io](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/graph/badge.svg)](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/commits)
 
 [Code Climate](https://codeclimate.com/github/torbengb/bank2ynab/): 
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/progress/maintainability)
@@ -17,6 +18,7 @@ Development: [![Travis status](https://api.travis-ci.org/torbengb/bank2ynab.svg?
 [![Code Climate issues](https://img.shields.io/codeclimate/issues/github/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/issues)
 
 [PyPI](https://pypi.org/search/?q=bank2ynab&o=&c=Programming+Language+%3A%3A+Python): 
+[![PyPI License](https://img.shields.io/pypi/l/bank2ynab.svg)](https://pypi.org/project/bank2ynab/)
 [![PyPI Python Version](https://img.shields.io/pypi/pyversions/bank2ynab.svg)](https://pypi.org/project/bank2ynab/)
 [![PyPI Development Status](https://img.shields.io/pypi/status/bank2ynab.svg)](https://pypi.org/project/bank2ynab/)
 
@@ -81,14 +83,16 @@ There are currently more than 80 GitHub projects related to YNAB converter scrip
 
 ## <a name=install></a>Installation Instructions
 
-1. On a command line, run `pip install bank2ynab`. Alternatively, you can download [this ZIP file](https://github.com/torbengb/bank2ynab/archive/master.zip).
+1. Install Python if you don't have it already: ([Download it from python.org](https://www.python.org/downloads/)).
+1. Install the Python package manager if you don't have it already: On a command line, run `python -m ensurepip --default-pip`.
+1. Install `bank2ynab`: On a command line, run `pip install bank2ynab`. Alternatively, you can download [this ZIP file](https://github.com/torbengb/bank2ynab/archive/master.zip).
 1. Note the [Requirements](#requirements) for additional details!
 1. When you're done, refer to the [User Guide](#userguide) below.
 
 ### <a name="requirements"></a>Requirements
 
 - Windows or Mac or Linux
-- Python v2.7+ installed, v3.5+ preferred ([download it from python.org](https://www.python.org/downloads/))
+- Python v2.7+ installed, v3.5+ preferred ([Download it from python.org](https://www.python.org/downloads/))
 - Support for other scripting languages may follow. Contributions are welcome!
 
 ## <a name="userguide"></a>User Guide
@@ -103,9 +107,10 @@ Using `bank2ynab` is easy:
    - `Delete Source File = True` set to `False` if you want to keep the original CSV you downloaded.
 1. Check that the configuration in `bank2ynab.conf` contains a `[SECTION]` for your banking format. *You only need to do this once per bank you use.* If you can't find your bank in the config, [tell us your bank's format](https://goo.gl/forms/b7SNwTxmQFfnXlMf2) and we can add it to the project.
 1. Run the `bank2ynab.py` conversion script to generate the YNAB-ready CSV output file. How to do this depends on your operating system:
-   - Windows: Open a command prompt, navigate to the script directory, and run the command `python bank2ynab.py`.
+   - If you installed `bank2ynab` using the `pip` command, then you just need to open a command prompt and type `bank2ynab`.
+   - Windows: Open a command prompt, navigate to the script directory, and run the command `python bank2ynab.py`.
      - Pro tip: Create a program shortcut! Right-click on the `bank2ynab.bat` file, choose *Send to* and then choose *Desktop (create shortcut)*. Now you can just double-click that shortcut!
-   - Linux/Mac: Open a terminal, navigate to the script directory, and run the command `python3 ./bank2ynab.py`.
+   - Linux/Mac: Open a terminal, navigate to your script location, and run the command `python3 ./bank2ynab.py`.
      - *Important:* Be sure to use `python3` specifically, and not `python` or `python2` which is probably the system default.
 1. Drag-and-drop the converted CSV file onto the YNAB web app. 
    - YNAB will detect this and offer you import options. If you had already switched YNAB to the corresponding account view, YNAB will understand that you want to import this file to this account.
