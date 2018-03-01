@@ -8,17 +8,17 @@ A common project to consolidate all conversion efforts from various banks' expor
 
 Development: [![Travis status](https://api.travis-ci.org/torbengb/bank2ynab.svg?branch=develop)](https://travis-ci.org/torbengb/bank2ynab) 
 [![Join the chat at https://gitter.im/bank2ynab/Lobby](https://badges.gitter.im/github-release-notes/Lobby.svg)](https://gitter.im/bank2ynab/Lobby)
-[![codecov](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/graph/badge.svg)](https://codecov.io/gh/torbengb/bank2ynab)
-[![GitHub issues](https://img.shields.io/github/issues-raw/torbengb/bank2ynab.svg)](https://github.com/torbengb/bank2ynab/issues)
+[![codecov.io](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/graph/badge.svg)](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/commits)
+[![GitHub open issues](https://img.shields.io/github/issues-raw/torbengb/bank2ynab.svg)](https://github.com/torbengb/bank2ynab/issues)
 
 [Code Climate](https://codeclimate.com/github/torbengb/bank2ynab/): 
-![Code Climate](https://img.shields.io/codeclimate/maintainability/torbengb/bank2ynab.svg)
-![Code Climate](https://img.shields.io/codeclimate/coverage/github/torbengb/bank2ynab.svg)
-![Code Climate](https://img.shields.io/codeclimate/issues/github/torbengb/bank2ynab.svg)
+[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/progress/maintainability)
+[![Code Climate code coverage](https://img.shields.io/codeclimate/coverage/github/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/progress/coverage)
+[![Code Climate issues](https://img.shields.io/codeclimate/issues/github/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/issues)
 
 [PyPI](https://pypi.org/search/?q=bank2ynab&o=&c=Programming+Language+%3A%3A+Python): 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bank2ynab.svg)
-![PyPI - Status](https://img.shields.io/pypi/status/bank2ynab.svg)
+[![PyPI Python Version](https://img.shields.io/pypi/pyversions/bank2ynab.svg)](https://pypi.org/project/bank2ynab/)
+[![PyPI Development Status](https://img.shields.io/pypi/status/bank2ynab.svg)](https://pypi.org/project/bank2ynab/)
 
 <!-- Here's a *ridiculous amount of badges: http://shields.io/#your-badge -->
 
