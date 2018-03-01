@@ -15,7 +15,7 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 from __init__ import NAME, VERSION, DESCRIPTION, LONG_DDESCRIPTION, \
-    URL, AUTHOR, EMAIL
+    URL, AUTHOR, EMAIL, KEYWORDS
 
 here = path.abspath(path.dirname(__file__))
 
@@ -110,9 +110,7 @@ setup(
     # project page. What does your project relate to?
     #
     # Note that this is a string of words separated by whitespace, not a list.
-    keywords='ynab bank bank-statement conversion-efforts credit-card'
-        'transactions converter ynab-converter ynab-format money csv'
-        'bank-format conversion conversion-utility',  # Optional
+    keywords=KEYWORDS,  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
