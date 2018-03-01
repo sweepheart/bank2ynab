@@ -14,13 +14,13 @@ from setuptools import setup, find_packages
 # To use a consistent encoding
 from codecs import open
 from os import path
-from __init__ import NAME, VERSION, DESCRIPTION, LONG_DDESCRIPTION, \
+from __init__ import NAME, VERSION, DESCRIPTION, LONG_DESCRIPTION, \
     URL, AUTHOR, EMAIL, KEYWORDS
 
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 # Arguments marked as "Required" below must be included for upload to PyPI.
@@ -173,8 +173,7 @@ setup(
     # executes the function `main` from this package when invoked:
     entry_points={  # Optional
         'console_scripts': [
-#            'sample=sample:main',
-            NAME,',NAME,':main',
+            NAME+'='+NAME+':main',
         ],
     },
 
@@ -188,7 +187,7 @@ setup(
     # maintainers, and where to support the project financially. The key is
     # what's used to render the link text on PyPI.
     project_urls={  # Optional
-        'Bug Reports': URL,'/issues',
+        'Bug Reports': URL+'/issues',
 #        'Funding': 'https://donate.pypi.org',
 #        'Say Thanks!': 'http://saythanks.io/to/example',
         'Source': URL,
