@@ -82,21 +82,8 @@ setup(
     # For a list of valid classifiers, see
     # https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[  # Optional
-        # How mature is this project? Common values are
-        #   3 - Alpha
-        #   4 - Beta
-        #   5 - Production/Stable
-        'Development Status :: 4 - Beta',
-
-        # Indicate who your project is intended for
-#        'Intended Audience :: Developers',
-#        'Topic :: Software Development :: Build Tools',
-
-        # Pick your license as you wish
-        'License :: OSI Approved :: MIT License',
-
-        # Specify the Python versions you support here. In particular, ensure
-        # that you indicate whether you support Python 2, Python 3 or both.
+        # in the order as shown on https://pypi.org/search/
+        # see also: https://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
@@ -104,13 +91,27 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'License :: OSI Approved :: MIT License',
+#        'Framework :: None',
+        'Intended Audience :: End Users/Desktop',
+        'Topic :: Utilities',
+        'Topic :: Personal Finance :: Utilities',
+        'Topic :: Other/Nonlisted Topic',
+        'Environment :: Console',
+        'Operating System :: MacOS',
+        'Operating System :: Windows',
+        'Operating System :: POSIX',
+        'Operating System :: POSIX :: Linux',
+        'Operating System :: POSIX :: BSD',
+        'Natural Language :: English',
+        'Development Status :: 5 - Production/Stable',
     ],
 
     # This field adds keywords for your project which will appear on the
     # project page. What does your project relate to?
     #
     # Note that this is a string of words separated by whitespace, not a list.
-    # keywords=KEYWORDS,  # Optional
+    keywords=KEYWORDS,  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
@@ -122,7 +123,7 @@ setup(
     #   py_modules=["my_module"],
 #    py_modules=[NAME],
     #
-    packages=find_packages(exclude=['contrib', 'docs', 'test', 'tests']),  # Required
+    packages=find_packages(exclude=['contrib', 'docs', 'test', 'tests', 'test-data']),  # Required
     # This field lists other packages that your project depends on to run.
     # Any package you put here will be installed by pip when your project is
     # installed, so they must be valid existing projects.
@@ -187,9 +188,10 @@ setup(
     # maintainers, and where to support the project financially. The key is
     # what's used to render the link text on PyPI.
     project_urls={  # Optional
+        'Readme': URL+'/tree/master#bank2ynab',
+        'Source': URL+'/tree/develop',
         'Bug Reports': URL+'/issues',
 #        'Funding': 'https://donate.pypi.org',
 #        'Say Thanks!': 'http://saythanks.io/to/example',
-        'Source': URL,
     },
 )
