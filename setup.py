@@ -142,7 +142,7 @@ setup(
     # extras_require={  # Optional
     #     'dev': ['check-manifest'],
     #     'test': ['coverage'],
-    #},
+    # },
 
     # based on https://packaging.python.org/tutorials/
     # distributing-packages/#python-requires :
