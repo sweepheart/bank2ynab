@@ -11,13 +11,17 @@ Development: [![Travis status](https://api.travis-ci.org/torbengb/bank2ynab.svg?
 ![GitHub last commit](https://img.shields.io/github/last-commit/torbengb/bank2ynab.svg)
 [![GitHub open issues](https://img.shields.io/github/issues-raw/torbengb/bank2ynab.svg)](https://github.com/torbengb/bank2ynab/issues)
 [![Join the chat at https://gitter.im/bank2ynab/Lobby](https://badges.gitter.im/github-release-notes/Lobby.svg)](https://gitter.im/bank2ynab/Lobby)
+
+Testing:
 [![Coverage Status](https://coveralls.io/repos/github/torbengb/bank2ynab/badge.svg?branch=develop)](https://coveralls.io/github/torbengb/bank2ynab?branch=develop)
 [![Code Climate issues](https://img.shields.io/codeclimate/issues/github/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/issues)
-<!-- [![codecov.io](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/graph/badge.svg)](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/commits) -->
-<!-- [![Code Health](https://landscape.io/github/torbengb/bank2ynab/develop/landscape.svg?style=flat)](https://landscape.io/github/torbengb/bank2ynab/develop) -->
 
+<!--
+[![codecov.io](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/graph/badge.svg)](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/commits)
+[![Code Health](https://landscape.io/github/torbengb/bank2ynab/develop/landscape.svg?style=flat)](https://landscape.io/github/torbengb/bank2ynab/develop)
 [Code Climate](https://codeclimate.com/github/torbengb/bank2ynab/): 
-<!-- [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/progress/maintainability) -->
+[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/progress/maintainability)
+-->
 
 [PyPI](https://pypi.org/search/?q=bank2ynab&o=&c=Programming+Language+%3A%3A+Python): 
 [![PyPI License](https://img.shields.io/pypi/l/bank2ynab.svg)](https://pypi.org/project/bank2ynab/)
