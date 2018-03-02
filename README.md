@@ -8,15 +8,16 @@
 A common project to consolidate all conversion efforts from various banks' export formats into YNAB's import format.
 
 Development: [![Travis status](https://api.travis-ci.org/torbengb/bank2ynab.svg?branch=develop)](https://travis-ci.org/torbengb/bank2ynab) 
-[![Join the chat at https://gitter.im/bank2ynab/Lobby](https://badges.gitter.im/github-release-notes/Lobby.svg)](https://gitter.im/bank2ynab/Lobby)
-[![GitHub open issues](https://img.shields.io/github/issues-raw/torbengb/bank2ynab.svg)](https://github.com/torbengb/bank2ynab/issues)
 ![GitHub last commit](https://img.shields.io/github/last-commit/torbengb/bank2ynab.svg)
-[![codecov.io](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/graph/badge.svg)](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/commits)
+[![GitHub open issues](https://img.shields.io/github/issues-raw/torbengb/bank2ynab.svg)](https://github.com/torbengb/bank2ynab/issues)
+[![Join the chat at https://gitter.im/bank2ynab/Lobby](https://badges.gitter.im/github-release-notes/Lobby.svg)](https://gitter.im/bank2ynab/Lobby)
+[![Coverage Status](https://coveralls.io/repos/github/torbengb/bank2ynab/badge.svg?branch=develop)](https://coveralls.io/github/torbengb/bank2ynab?branch=develop)
+[![Code Climate issues](https://img.shields.io/codeclimate/issues/github/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/issues)
+<!-- [![codecov.io](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/graph/badge.svg)](https://codecov.io/gh/torbengb/bank2ynab/branch/develop/commits) -->
+<!-- [![Code Health](https://landscape.io/github/torbengb/bank2ynab/develop/landscape.svg?style=flat)](https://landscape.io/github/torbengb/bank2ynab/develop) -->
 
 [Code Climate](https://codeclimate.com/github/torbengb/bank2ynab/): 
-[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/progress/maintainability)
-[![Code Climate code coverage](https://img.shields.io/codeclimate/coverage/github/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/progress/coverage)
-[![Code Climate issues](https://img.shields.io/codeclimate/issues/github/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/issues)
+<!-- [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/torbengb/bank2ynab.svg)](https://codeclimate.com/github/torbengb/bank2ynab/progress/maintainability) -->
 
 [PyPI](https://pypi.org/search/?q=bank2ynab&o=&c=Programming+Language+%3A%3A+Python): 
 [![PyPI License](https://img.shields.io/pypi/l/bank2ynab.svg)](https://pypi.org/project/bank2ynab/)
