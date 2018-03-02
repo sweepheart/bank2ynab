@@ -538,7 +538,7 @@ class Bank2Ynab(object):
                     print("Removing input file: {}".format(original_file_path))
                     os.remove(original_file_path)
         print("\nDone! {} files processed.".format(files_processed))
-        print(NAME + ' v' + VERSION + 
+        print(NAME + ' v' + VERSION +
               ' using Python ' + platform.python_version() + "\n")
 
 
