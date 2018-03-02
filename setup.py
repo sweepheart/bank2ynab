@@ -90,7 +90,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'License :: OSI Approved :: MIT License',
-        #'Framework :: None',
+        # 'Framework :: None',
         'Intended Audience :: End Users/Desktop',
         'Topic :: Utilities',
         'Topic :: Personal Finance :: Utilities',
@@ -121,7 +121,7 @@ setup(
     #   py_modules=["my_module"],
     # py_modules=[NAME],
     #
-    packages=find_packages(exclude=['contrib', 'docs', 'test', 
+    packages=find_packages(exclude=['contrib', 'docs', 'test',
                                     'tests', 'test-data']),  # Required
     # This field lists other packages that your project depends on to run.
     # Any package you put here will be installed by pip when your project is
@@ -139,9 +139,9 @@ setup(
     #
     # Similar to `install_requires` above, these must be valid existing
     # projects.
-    #extras_require={  # Optional
-    #    'dev': ['check-manifest'],
-    #    'test': ['coverage'],
+    # extras_require={  # Optional
+    #     'dev': ['check-manifest'],
+    #     'test': ['coverage'],
     #},
 
     # based on https://packaging.python.org/tutorials/
@@ -153,16 +153,16 @@ setup(
     #
     # If using Python 2.6 or earlier, then these have to be included in
     # MANIFEST.in as well.
-    #package_data={  # Optional
-    #    'sample': ['package_data.dat'],
-    #},
+    # package_data={  # Optional
+    #     'sample': ['package_data.dat'],
+    # },
 
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
     # http://docs.python.org/3.4/distutils/setupscript.html#installing-additional-files
     #
     # In this case, 'data_file' will be installed into '<sys.prefix>/my_data'
-    #data_files=[('my_data', ['data/data_file'])],  # Optional
+    # data_files=[('my_data', ['data/data_file'])],  # Optional
 
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
@@ -190,7 +190,7 @@ setup(
         'Readme': URL+'/tree/master#bank2ynab',
         'Source': URL+'/tree/develop',
         'Bug Reports': URL+'/issues',
-        #'Funding': 'https://donate.pypi.org',
-        #'Say Thanks!': 'http://saythanks.io/to/example',
+        # 'Funding': 'https://donate.pypi.org',
+        # 'Say Thanks!': 'http://saythanks.io/to/example',
     },
 )
