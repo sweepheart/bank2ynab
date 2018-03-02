@@ -4,8 +4,8 @@
 
 # Package meta-data:
 NAME = "bank2ynab"
-DESCRIPTION = "A common project to consolidate all conversion efforts " \
-        "from various banks' export formats into YNAB's import format."
+DESCRIPTION = "Convert CSV from various banks' export formats into " \
+        "YNAB's import format."
 LONG_DESCRIPTION = "A common project to consolidate all conversion efforts " \
         "from various banks' export formats into YNAB's import format."
 URL = "https://github.com/torbengb/bank2ynab"
