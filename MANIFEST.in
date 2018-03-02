@@ -3,10 +3,16 @@
 
 # specifically include only these files:
 
+include LICENSE
+include README.md
+include __init__.py
 include bank2ynab.py
 include bank2ynab.conf
 include bank2ynab.bat
-include __init__.py
-include README.md
-include LICENSE
 include plugins/handelsbanken.py
+
+# specifically exclude these files:
+
+recursive-exclude .git/
+recursive-exclude docs/
+recursive-exclude test*/
