@@ -3,6 +3,7 @@
 -->
 # bank2ynab
 
+## Convert CSV files from various banks into YNAB's import format
 
 A common project to consolidate all conversion efforts from various banks' export formats into YNAB's import format.
 
