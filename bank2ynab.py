@@ -16,24 +16,15 @@
 #
 #
 # don't edit below here unless you know what you're doing!
-import codecs, csv, os, importlib, re, platform
+import codecs
+import csv
+import os
+import importlib
+import re
+import platform
 from os.path import abspath, join, dirname, basename
 from datetime import datetime
 from __init__ import NAME, VERSION
-
-# Package meta-data:
-# NAME = "bank2ynab"
-# DESCRIPTION = "A common project to consolidate all conversion efforts " \
-#         "from various banks' export formats into YNAB's import format."
-# LONG_DESCRIPTION = "A common project to consolidate all conversion efforts " \
-#         "from various banks' export formats into YNAB's import format."
-# URL = "https://github.com/torbengb/bank2ynab"
-# EMAIL = "torben@g-b.dk"
-# AUTHOR = "https://github.com/torbengb/bank2ynab/graphs/contributors"
-# KEYWORDS = "ynab bank bank-statement conversion-efforts credit-card" \
-#         "transactions converter ynab-converter ynab-format money csv" \
-#         "bank-format conversion conversion-utility"
-# VERSION = "1.0.1000006"
 
 # main Python2 switch
 # any module with different naming should be handled here
@@ -548,6 +539,7 @@ class Bank2Ynab(object):
                     os.remove(original_file_path)
         print("\nDone! {} files processed.".format(files_processed))
         print(NAME + ' v' + VERSION + ' using Python ' + platform.python_version() + "\n")
+
 
 # Let's run this thing!
 if __name__ == "__main__":
