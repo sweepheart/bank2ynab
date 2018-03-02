@@ -1,5 +1,5 @@
 # created for Issue #176 based on 
-# https://packaging.python.org/tutorials/distributing-
+# https://packaging.python.org/tutorials/distributing- \
 # packages/#configuring-your-project
 
 # Package meta-data:
@@ -14,8 +14,7 @@ AUTHOR = "https://github.com/torbengb/bank2ynab/graphs/contributors"
 KEYWORDS = "ynab bank bank-statement conversion-efforts credit-card" \
         "transactions converter ynab-converter ynab-format money csv" \
         "bank-format conversion conversion-utility"
-VERSION = "1.0.1000007"
-
+VERSION = "1.0.0.dev201803020943"
 
 # define the version numbers:
 # !! See also: https://github.com/torbengb/bank2ynab/wiki/VersionNumbers !!
@@ -36,3 +35,12 @@ VERSION = "1.0.1000007"
 # https://codereview.stackexchange.com/a/131490 :
 # version_info = (version_major, version_minor, version_patch)
 # VERSION = '.'.join(str(c) for c in version_info)
+
+# Apparently, version numbers must follow this format:
+# [N!]N(.N)*[{a|b|rc}N][.postN][.devN]
+# sources:
+# https://packaging.python.org/tutorials/distributing-packages/#standards- \
+# compliance-for-interoperability
+# https://www.python.org/dev/peps/pep-0440/#public-version-identifiers
+# Notes:
+# Hyphens are not allowed! That's unfortunate, as the branches contain them.
