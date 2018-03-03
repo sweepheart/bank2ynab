@@ -6,6 +6,8 @@ path_download=~/Downloads
 # copy test files
 cp $path_git/test-data/*.csv $path_download
 cp $path_git/test-data/*.CSV $path_download
+rm $path_download/fixed_*.csv
+rm $path_download/fixed_*.CSV
 
 # run the script
 python3 $path_git/bank2ynab.py

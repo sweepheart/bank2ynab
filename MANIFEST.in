@@ -13,6 +13,6 @@ include plugins/handelsbanken.py
 
 # specifically exclude these files:
 
-recursive-exclude .git/
-recursive-exclude docs/
-recursive-exclude test*/
+recursive-exclude .git/ *
+recursive-exclude docs/ *
+recursive-exclude test*/ *
