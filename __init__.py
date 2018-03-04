@@ -15,7 +15,7 @@ AUTHOR = "https://github.com/torbengb/bank2ynab/graphs/contributors"
 KEYWORDS = "ynab bank bank-statement conversion-efforts credit-card" \
         "transactions converter ynab-converter ynab-format money csv" \
         "bank-format conversion conversion-utility"
-VERSION = "1.0.0.dev201803020943"
+VERSION = "1.0.1000013" # "1.0.0.dev201803041527"
 
 # define the version numbers:
 # !! See also: https://github.com/torbengb/bank2ynab/wiki/VersionNumbers !!

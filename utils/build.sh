@@ -42,11 +42,11 @@ if [ $response == ""y"" ]
 then echo "Package will be listed at https://test.pypi.org/project/bank2ynab/#history in a few minutes." ; echo ""
 fi
 
-get_input "Wait 2 minutes and install new build?" " "
+get_input "Wait a moment and install new build?" " "
 if [ $response == ""y"" ]; then
   echo "Removing..." ; echo ""
   sudo -H pip uninstall -y bank2ynab
-  echo "Waiting, then installing..."
-  sleep 120
+  echo "" ; echo "Waiting, then installing..."
+  sleep 30
   sudo -H pip install --no-cache-dir --index-url https://test.pypi.org/simple/ bank2ynab
 fi
