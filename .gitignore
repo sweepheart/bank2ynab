@@ -1,3 +1,7 @@
+# personal information:
+local_user.py
+local_user.sh
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
