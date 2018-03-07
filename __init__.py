@@ -20,4 +20,4 @@ KEYWORDS = "ynab bank bank-statement conversion-efforts credit-card" \
 # !! for details about correct version number values!
 # Hyphens are not allowed!
 
-VERSION = "1.0.1a.dev201803041527"
+VERSION = "1.0.0.dev201803071359"
