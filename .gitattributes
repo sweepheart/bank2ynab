@@ -1,0 +1,21 @@
+# this file is based on https://softwareengineering.stackexchange.com/a/367655/2228
+
+#exclude .gitignore and similar from the generated tarball
+.git*           export-ignore
+
+# exclude CI configurations (useless outside the repo)
+.travis-ci.yml  export-ignore
+.appveyor.yml   export-ignore
+
+# exclude all CI files:
+*.yml           export-ignore
+.coveragerc     export-ignore
+
+# exclude build files:
+MANIFEST.in     export-ignore
+setup.cfg       export-ignore
+
+# exclude dev and test files:
+test/*         export-ignore
+test-data/*    export-ignore
+utils/*        export-ignore
