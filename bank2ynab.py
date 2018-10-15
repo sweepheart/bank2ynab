@@ -532,20 +532,22 @@ class Bank2Ynab(object):
         for bank in self.banks:
             # find all applicable files
             files = bank.get_files()
-            for original_file_path in files:
-                print("\nParsing input file:  {}".format(original_file_path))
+            bank_name = bank.name
+            for src_file in files:
+                logging.info("\nParsing input file:  {} (format: {})".format(
+                            src_file, bank_name))
                 # increment for the summary:
                 files_processed += 1
                 # create cleaned csv for each file
-                output = bank.read_data(original_file_path)
-                bank.write_data(original_file_path, output)
+                output = bank.read_data(src_file)
+                bank.write_data(src_file, output)
                 # delete original csv file
                 if bank.config["delete_original"] is True:
-                    print("Removing input file: {}".format(original_file_path))
-                    os.remove(original_file_path)
-        print("\nDone! {} files processed.".format(files_processed))
-        print(NAME + ' v' + VERSION +
-              ' using Python ' + platform.python_version() + "\n")
+                    logging.info("Removing input file: {}".format(src_file))
+                    os.remove(src_file)
+        logging.info("\nDone! {} files processed.\n".format(files_processed))
+        logging.info("{} v {} using Python {}\n".format(
+                    NAME, VERSION,platform.python_version()))
 
 
 # Let's run this thing!
