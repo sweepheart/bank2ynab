@@ -24,6 +24,10 @@ import re
 import platform
 from os.path import abspath, join, dirname, basename
 from datetime import datetime
+import logging
+
+# configure our logger
+logging.basicConfig(format="%(levelname)s %(message)s", level=logging.INFO)
 from __init__ import NAME, VERSION
 
 # main Python2 switch
