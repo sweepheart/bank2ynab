@@ -28,6 +28,7 @@ import logging
 
 # configure our logger
 logging.basicConfig(format="%(levelname)s %(message)s", level=logging.INFO)
+
 from __init__ import NAME, VERSION
 
 # main Python2 switch
