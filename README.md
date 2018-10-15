@@ -61,11 +61,9 @@ There are currently more than 80 GitHub projects related to YNAB converter scrip
 
 ## <a name=install></a>Installation Instructions
 
-1. Install Python if you don't have it already: ([Download it from python.org](https://www.python.org/downloads/)).
-1. Install the Python package manager if you don't have it already: On a command line, run `python -m ensurepip --default-pip`.
-1. Install `bank2ynab`: On a command line, run `pip install bank2ynab`. Alternatively, you can download [this ZIP file](https://github.com/torbengb/bank2ynab/archive/master.zip).
-1. Note the [Requirements](#requirements) for additional details!
-1. When you're done, refer to the [User Guide](#userguide) below.
+- Download [this ZIP file](https://github.com/bank2ynab/bank2ynab/archive/master.zip)
+- Note the [Requirements](#requirements) for additional details!
+- When you're done, refer to the [User Guide](#userguide) below.
 
 ### <a name="requirements"></a>Requirements
 
