@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/env python3
 #
 # bank2ynab.py
 #
@@ -93,13 +93,13 @@ class CrossversionCsvWriter(CrossversionFileContext):
         if self.is_py2:
             self.stream = open(self.file_path, "wb")
             self.csv_object = UnicodeWriter(
-                                    self.stream,
-                                    encoding="utf-8",
-                                    **self.params)
+                self.stream,
+                encoding="utf-8",
+                **self.params)
         else:
             self.stream = open(
-                            self.file_path, "w",
-                            encoding="utf-8", newline="")
+                self.file_path, "w",
+                encoding="utf-8", newline="")
             self.csv_object = csv.writer(self.stream, **self.params)
         return self.csv_object
 
@@ -225,21 +225,21 @@ def fix_conf_params(conf_obj, section_name):
     :return: dict with all parameters
     """
     config = {
-            "input_columns": ["Input Columns", False, ","],
-            "output_columns": ["Output Columns", False, ","],
-            "input_filename": ["Source Filename Pattern", False, ""],
-            "path": ["Source Path", False, ""],
-            "ext": ["Source Filename Extension", False, ""],
-            "regex": ["Use Regex For Filename", True, ""],
-            "fixed_prefix": ["Output Filename Prefix", False, ""],
-            "input_delimiter": ["Source CSV Delimiter", False, ""],
-            "header_rows": ["Header Rows", False, ""],
-            "footer_rows": ["Footer Rows", False, ""],
-            "date_format": ["Date Format", False, ""],
-            "delete_original": ["Delete Source File", True, ""],
-            "cd_flags": ["Inflow or Outflow Indicator", False, ","],
-            "payee_to_memo": ["Use Payee for Memo", True, ""],
-            "plugin": ["Plugin", False, ""]}
+        "input_columns": ["Input Columns", False, ","],
+        "output_columns": ["Output Columns", False, ","],
+        "input_filename": ["Source Filename Pattern", False, ""],
+        "path": ["Source Path", False, ""],
+        "ext": ["Source Filename Extension", False, ""],
+        "regex": ["Use Regex For Filename", True, ""],
+        "fixed_prefix": ["Output Filename Prefix", False, ""],
+        "input_delimiter": ["Source CSV Delimiter", False, ""],
+        "header_rows": ["Header Rows", False, ""],
+        "footer_rows": ["Footer Rows", False, ""],
+        "date_format": ["Date Format", False, ""],
+        "delete_original": ["Delete Source File", True, ""],
+        "cd_flags": ["Inflow or Outflow Indicator", False, ","],
+        "payee_to_memo": ["Use Payee for Memo", True, ""],
+        "plugin": ["Plugin", False, ""]}
 
     for key in config:
         config[key] = get_config_line(conf_obj, section_name, config[key])
@@ -269,15 +269,15 @@ def get_config_line(conf_obj, section_name, args):
 def find_directory(filepath):
     """ finds the downloads folder for the active user if filepath is not set
     """
-    if filepath is "":
-        if os.name is "nt":
+    if filepath == "":
+        if os.name == "nt":
             # Windows
             try:
                 import winreg
             except ImportError:
                 import _winreg as winreg
-            shell_path = ("SOFTWARE\Microsoft\Windows\CurrentVersion"
-                          "\Explorer\Shell Folders")
+            shell_path = ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion"
+                          "\\Explorer\\Shell Folders")
             dl_key = "{374DE290-123F-4565-9164-39C4925E467B}"
             with winreg.OpenKey(winreg.HKEY_CURRENT_USER, shell_path) as key:
                 input_dir = winreg.QueryValueEx(key, dl_key)[0]
@@ -322,7 +322,7 @@ class B2YBank(object):
         missing_dir = False
         try_path = self.config["path"]
         path = ""
-        if file_pattern is not "":
+        if file_pattern != "":
             try:
                 path = find_directory(try_path)
             except FileNotFoundError:
@@ -337,7 +337,7 @@ class B2YBank(object):
                 files = [join(path, f)
                          for f in directory_list
                          if f.endswith(ext)
-                         if re.match(file_pattern + ".*\.", f)
+                         if re.match(file_pattern + r".*\.", f)
                          if prefix not in f]
             else:
                 files = [join(path, f)
@@ -414,19 +414,27 @@ class B2YBank(object):
 
     def _fix_row(self, row):
         """
-        rearrange a row of our file to match expected output format
+        rearrange a row of our file to match expected output format,
+        optionally combining multiple input columns into a single output column
         :param row: list of values
         :return: list of values in correct output format
         """
         output = []
         for header in self.config["output_columns"]:
-            try:
-                # check to see if our output header exists in input
-                index = self.config["input_columns"].index(header)
-                cell = row[index]
-            except (ValueError, IndexError):
-                # header isn't in input, default to blank cell
-                cell = ""
+            # find all input columns with data for this output column
+            indices = filter(lambda i:
+                             self.config["input_columns"][i] == header,
+                             range(len(self.config["input_columns"])))
+            # fetch data from those input columns if they are not empty,
+            # and merge them
+            cell_parts = []
+            for i in indices:
+                try:
+                    if row[i].lstrip():
+                        cell_parts.append(row[i].lstrip())
+                except IndexError:
+                    pass
+            cell = " ".join(cell_parts)
             output.append(cell)
         return output
 
@@ -472,15 +480,20 @@ class B2YBank(object):
         :param row: list of values
         :param date_format: date format string
         """
-        if date_format:
-            date_col = self.config["input_columns"].index("Date")
+        if not(date_format):
+            return(row)
+
+        date_col = self.config["input_columns"].index("Date")
+        try:
             if row[date_col] == "":
                 return row
             # parse our date according to provided formatting string
-            input_date = datetime.strptime(row[date_col], date_format)
+            input_date = datetime.strptime(row[date_col].lstrip(), date_format)
             # do our actual date processing
             output_date = datetime.strftime(input_date, "%d/%m/%Y")
             row[date_col] = output_date
+        except (ValueError, IndexError):
+            pass
         return row
 
     def _cd_flag_process(self, row, cd_flags):
@@ -506,8 +519,8 @@ class B2YBank(object):
         target_dir = dirname(filename)
         target_fname = basename(filename)[:-4]
         new_filename = "{}{}.csv".format(
-                self.config["fixed_prefix"],
-                target_fname)
+            self.config["fixed_prefix"],
+            target_fname)
         while os.path.isfile(new_filename):
             counter = 1
             new_filename = "{}{}_{}.csv".format(
@@ -561,7 +574,7 @@ class Bank2Ynab(object):
             bank_name = bank.name
             for src_file in files:
                 logging.info("\nParsing input file:  {} (format: {})".format(
-                            src_file, bank_name))
+                    src_file, bank_name))
                 # increment for the summary:
                 files_processed += 1
                 # create cleaned csv for each file
