@@ -3,3 +3,4 @@ bank format:
   - ./bank2ynab.conf
 project automation:
   - .github/workflows/**/*
+ 
